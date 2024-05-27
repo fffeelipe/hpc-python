@@ -2,16 +2,17 @@
 FROM python:3.9-slim
 
 # Set the workdir
-WORKDIR 
+WORKDIR /project
 
 # Copy the requirements
-COPY 
+COPY ./* /project
 
 # Install the required packages (pip)
-RUN 
+RUN pip install -r requirements.txt
 
 # Copy the Python script
-COPY 
+#COPY
 
 # Define the command to run the script
-ENTRYPOINT 
+CMD ["python", "ascii_image_converter.py", "--file=ex1.png"]
+CMD ["cat", "out.txt"]
